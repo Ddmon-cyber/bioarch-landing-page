@@ -83,7 +83,7 @@
     .logo {
         position: absolute;
         top: 38px;
-        left: 54px;
+        left: 95px;
         bottom: auto;
         right: auto;
         z-index: 2;
@@ -103,77 +103,71 @@
             font-size: 2em;
         }
     }
-    @media (max-width: 375px) { /* iPhone SE */
-        .content, .logo {
-            max-width: 98%;
-            left: 2%;
+    @media (max-width: 1024px) {
+        .content {
+            left: 13%;
         }
-        .content h1 {
-            font-size: 1.5em;
-        }
-        .logo img {
-            height: 48px;
+        .logo {
+            left: 5%;
         }
     }
-    @media (max-width: 414px) { /* iPhone XR, iPhone 12 Pro */
-        .content, .logo {
-            max-width: 98%;
-            left: 2%;
-        }
-        .content h1 {
-            font-size: 1.7em;
-        }
-        .logo img {
-            height: 54px;
+    /* iPhone 14 Pro Max */
+    @media (max-width: 430px) {
+        .logo {
+            left: 18px;
         }
     }
-    @media (max-width: 430px) { /* iPhone 14 Pro Max */
-        .content, .logo {
-            max-width: 98%;
-            left: 2%;
-        }
-        .content h1 {
-            font-size: 1.8em;
-        }
-        .logo img {
-            height: 56px;
+
+    /* iPad Mini & iPad Air (portrait) */
+    @media (min-width: 431px) and (max-width: 1023px) {
+        .logo {
+            left: 32px;
         }
     }
-    @media (max-width: 768px) { /* iPad Mini */
-        .content, .logo {
-            max-width: 96%;
-            left: 2%;
-        }
-        .content h1 {
-            font-size: 2.2em;
-        }
-        .logo img {
-            height: 64px;
+
+    /* iPad Pro 12.9" (portrait, 1024px wide) */
+    @media (min-width: 1024px) and (max-width: 1100px) {
+        .logo {
+            left: 44px; /* Adjust as needed for perfect alignment */
         }
     }
-    @media (max-width: 834px) { /* iPad Air, iPad Pro 11" */
-        .content, .logo {
-            max-width: 94%;
-            left: 3%;
-        }
-        .content h1 {
-            font-size: 2.5em;
-        }
-        .logo img {
-            height: 70px;
-        }
+    /* iPhone SE (375 x 667) */
+    @media (max-width: 375px) {
+        .logo { left: 10px; }
+        .content { left: 10px; max-width: 95%; }
+        .content h1 { font-size: 1.1em; }
+        .logo img { height: 38px; }
     }
-    @media (max-width: 1024px) { /* iPad Pro 12.9" */
-        .content, .logo {
-            max-width: 92%;
-            left: 4%;
+
+    /* iPhone 12 Pro (390 x 844) */
+    @media (min-width: 376px) and (max-width: 389px) {
+        .logo { left: 12px; }
+        .content { left: 12px; max-width: 95%; }
+        .content h1 { font-size: 1.2em; }
+        .logo img { height: 40px; }
+    }
+
+    /* iPhone XR (414 x 896) */
+    @media (min-width: 390px) and (max-width: 414px) {
+        .logo { left: 14px; }
+        .content { left: 14px; max-width: 95%; }
+        .content h1 { font-size: 1.3em; }
+        .logo img { height: 44px; }
+    }
+
+    /* iPhone 14 Pro Max (center content) */
+    @media (min-width: 415px) and (max-width: 430px) {
+        .logo { left: 18px; }
+        .content {
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 95%;
+            text-align: center;
         }
-        .content h1 {
-            font-size: 2.8em;
-        }
-        .logo img {
-            height: 80px;
-        }
+        .content h1 { font-size: 1.4em; }
+        .logo img { height: 48px; }
     }
     </style>
 </head>
@@ -182,8 +176,8 @@
         <div class="content">
             <h1>Building great<br>
             Cannabis Brands starts<br>
-            with great Genetics.</h1>
-            <p>A unique suite of Proprietary Cannabis Strains<br>
+            with great Genetics</h1>
+            <p>A unique suite of Proprietary<br>Cannabis Strains<br>
             Development of IP – New Strains – California Breeding<br>
             Agronomics Applied – Cultivation Rollout Western Australia</p>
             <p class="info">
