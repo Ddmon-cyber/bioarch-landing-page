@@ -28,56 +28,50 @@
         overflow: hidden;
     }
     .bg {
-        position: relative;
+        background-image: url('background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         height: 100vh;
         width: 100vw;
-        overflow: hidden;
+        position: relative;
     }
     .bg::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0; left: 0; right: 0; bottom: 0;
-        background: url('background.jpg') center center / cover no-repeat;
-        filter: blur(16px) brightness(0.7);
-        z-index: 0;
-    }
-    .bg::after {
-        content: '';
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: url('background.jpg') center center / contain no-repeat;
+        background: rgba(0,0,0,0.18); /* lighter overlay for closer match */
         z-index: 1;
     }
-    .content, .logo {
-        position: absolute;
-        z-index: 2;
-    }
     .content {
-        top: 7.5%;      /* adjust for vertical placement */
-        left: 2.5%;     /* adjust for horizontal placement */
-        max-width: 44%; /* adjust for width */
+        position: absolute;
+        top: 28%;
+        left: 10%;
         color: #fff;
+        max-width: 100%;
+        z-index: 2;
     }
     .content h1 {
         font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
         font-weight: bold;
-        font-size: 3.8em;
-        line-height: 1;
-        letter-spacing: 0.5px;
-        margin-bottom: 0.28em; /* tighter spacing */
+        font-size: 4.9em;
+        line-height: 1.1;
+        letter-spacing: 1px;
+        margin-bottom: 0.6em;
         margin-top: 0;
         text-shadow: 0 2px 8px rgba(0,0,0,0.18);
     }
     .content p, .content .info {
         font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
         font-weight: 300;
-        font-size: 1.13em;
-        line-height: 1.13;
-        margin: 0.12em 0;      /* even tighter vertical spacing */
+        font-size: 1.4em;
+        line-height: 1.7;
+        margin: 0.3em 5;
     }
     .content .info {
+        font-weight: 5;
         font-size: 1em;
-        margin-top: 1.1em; /* less space above info */
+        margin-top: 1em;
     }
     .content a {
         color: #fff;
@@ -87,8 +81,12 @@
         text-decoration: underline;
     }
     .logo {
-        bottom: 38px;   /* adjust for vertical logo placement */
-        right: 54px;    /* adjust for horizontal logo placement */
+        position: absolute;
+        top: 38px;
+        left: 54px;
+        bottom: auto;
+        right: auto;
+        z-index: 2;
         display: flex;
         align-items: center;
     }
@@ -98,11 +96,83 @@
     }
     @media (max-width: 900px) {
         .content, .logo {
-            max-width: 90%;
+            max-width: 100%;
             left: 5%;
         }
         .content h1 {
             font-size: 2em;
+        }
+    }
+    @media (max-width: 375px) { /* iPhone SE */
+        .content, .logo {
+            max-width: 98%;
+            left: 2%;
+        }
+        .content h1 {
+            font-size: 1.5em;
+        }
+        .logo img {
+            height: 48px;
+        }
+    }
+    @media (max-width: 414px) { /* iPhone XR, iPhone 12 Pro */
+        .content, .logo {
+            max-width: 98%;
+            left: 2%;
+        }
+        .content h1 {
+            font-size: 1.7em;
+        }
+        .logo img {
+            height: 54px;
+        }
+    }
+    @media (max-width: 430px) { /* iPhone 14 Pro Max */
+        .content, .logo {
+            max-width: 98%;
+            left: 2%;
+        }
+        .content h1 {
+            font-size: 1.8em;
+        }
+        .logo img {
+            height: 56px;
+        }
+    }
+    @media (max-width: 768px) { /* iPad Mini */
+        .content, .logo {
+            max-width: 96%;
+            left: 2%;
+        }
+        .content h1 {
+            font-size: 2.2em;
+        }
+        .logo img {
+            height: 64px;
+        }
+    }
+    @media (max-width: 834px) { /* iPad Air, iPad Pro 11" */
+        .content, .logo {
+            max-width: 94%;
+            left: 3%;
+        }
+        .content h1 {
+            font-size: 2.5em;
+        }
+        .logo img {
+            height: 70px;
+        }
+    }
+    @media (max-width: 1024px) { /* iPad Pro 12.9" */
+        .content, .logo {
+            max-width: 92%;
+            left: 4%;
+        }
+        .content h1 {
+            font-size: 2.8em;
+        }
+        .logo img {
+            height: 80px;
         }
     }
     </style>
